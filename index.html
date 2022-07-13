@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./book.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+    <title>Library</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h3>Library</h3>
+            <button>Login</button>
+        </header>
+        <div class="addbook">
+            <button id="addBook">+ Add book</button>
+        </div>
+        <div class="main">
+            <div class="card-container" id="cardContainer">
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="addBookModal">
+        <form class="add-book-form" id="addBookForm">
+          <h3>Add new book</h3>
+          <input
+            class="input"
+            type="text"
+            id="title"
+            placeholder="Title"
+            required
+            maxlength="50"
+          />
+          <p class="error-msg" id="errorMsg"></p>
+          <input
+            class="input"
+            type="text"
+            id="author"
+            placeholder="Author"
+            required
+            maxlength="50"
+          />
+          <input
+            class="input"
+            type="number"
+            id="pages"
+            placeholder="Pages"
+            required
+            max="7500"
+          />
+          <div class="is-read">
+            <label for="is-read">Have you read it?</label>
+            <input 
+            class="checkbox" 
+            type="checkbox" 
+            id="isRead" 
+            />
+          </div>
+          <button class="btn btn-light-green" type="submit">Submit</button>
+        </form>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>

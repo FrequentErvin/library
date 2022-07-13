@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+:root {
+    --red: #ef4444;
+    --green: #008000;
+    --white: #e2e8f0;
+    --black: #1e293b;
+    --grey: #334155;
+    --shadow: rgba(0, 0, 0, 0.24) 0px 4px 4px;
+
+    --border-radius: 8px;
+    --spacing-lg: 20px;
+    --spacing-xl: 40px;
+  }
+.container{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--grey);
+    box-shadow: var(--shadow);
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+}
+button{
+    cursor: pointer;
+    transition-delay: 0.4ms;
+    box-shadow: var(--shadow);
+    color: var(--black);
+    font-size: 28px;
+    padding: 7px 20px;
+    border-style: none;
+    border-radius: var(--border-radius);
+}
+button:hover{
+    transform: scale(1.03);
+}
+.addbook{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.main{
+    margin: 30px;
+}
+.card-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    gap: 15px;
+}
+.modal {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease-in-out;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.input{
+    padding: 10px;
+    margin: 10px;
+}
+.read{
+    color: white !important;
+    background-color: green; 
+}
+.not-read{
+    background-color: var(--red);
+}
+.card button{
+    color: black;
+    font-size: 20px;
+}
+.remove-button{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+.card p{
+    font-size: 20px;
+}
+.modal button{
+    margin-top: 20px;
+    font-size: 20px;
+}
